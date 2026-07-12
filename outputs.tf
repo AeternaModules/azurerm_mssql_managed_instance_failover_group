@@ -1,3 +1,7 @@
+output "mssql_managed_instance_failover_groups_id" {
+  description = "Map of id values across all mssql_managed_instance_failover_groups, keyed the same as var.mssql_managed_instance_failover_groups"
+  value       = { for k, v in azurerm_mssql_managed_instance_failover_group.mssql_managed_instance_failover_groups : k => v.id }
+}
 output "mssql_managed_instance_failover_groups_location" {
   description = "Map of location values across all mssql_managed_instance_failover_groups, keyed the same as var.mssql_managed_instance_failover_groups"
   value       = { for k, v in azurerm_mssql_managed_instance_failover_group.mssql_managed_instance_failover_groups : k => v.location }
