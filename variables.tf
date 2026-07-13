@@ -19,8 +19,8 @@ EOT
     managed_instance_id                       = string
     name                                      = string
     partner_managed_instance_id               = string
-    readonly_endpoint_failover_policy_enabled = optional(bool)   # Default: true
-    secondary_type                            = optional(string) # Default: "Geo"
+    readonly_endpoint_failover_policy_enabled = optional(bool)
+    secondary_type                            = optional(string)
     read_write_endpoint_failover_policy = object({
       grace_minutes = optional(number)
       mode          = string
